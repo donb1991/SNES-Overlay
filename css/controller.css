@@ -1,0 +1,98 @@
+.snes-controller {
+  background-image: url("../assets/snes-controller.png");
+  width: 566px;
+  height: 245px;
+  position: absolute; }
+  .snes-controller div {
+    position: absolute; }
+  .snes-controller span {
+    position: absolute;
+    display: none; }
+  .snes-controller .d-pad {
+    top: 70px;
+    left: 70px;
+    height: 110px;
+    width: 110px; }
+    .snes-controller .d-pad .arrow {
+      margin: auto;
+      width: 0;
+      height: 0; }
+    .snes-controller .d-pad .up {
+      top: 4px;
+      left: 37px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 25px solid blue; }
+    .snes-controller .d-pad .right {
+      top: 40px;
+      left: 79px;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid blue; }
+    .snes-controller .d-pad .left {
+      top: 40px;
+      left: 2px;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 25px solid blue; }
+    .snes-controller .d-pad .down {
+      top: 81px;
+      left: 37px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 25px solid blue; }
+  .snes-controller .menu-buttons {
+    left: 222px;
+    top: 121px;
+    height: 45px;
+    width: 100px; }
+    .snes-controller .menu-buttons span {
+      width: 43px;
+      height: 19px;
+      transform: rotate(145deg);
+      border-radius: 5px;
+      background: blue; }
+    .snes-controller .menu-buttons .select {
+      top: 17px; }
+    .snes-controller .menu-buttons .start {
+      top: 17px;
+      left: 56px; }
+  .snes-controller .buttons {
+    height: 120px;
+    width: 160px;
+    left: 376px;
+    top: 68px; }
+    .snes-controller .buttons span {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: blue; }
+    .snes-controller .buttons .y {
+      top: 32px;
+      left: 7px; }
+    .snes-controller .buttons .x {
+      top: 0px;
+      left: 55px; }
+    .snes-controller .buttons .b {
+      top: 76px;
+      left: 56px; }
+    .snes-controller .buttons .a {
+      top: 44px;
+      left: 104px; }
+  .snes-controller .bumpers {
+    width: 390px;
+    height: 10px;
+    top: 2px;
+    left: 90px; }
+    .snes-controller .bumpers span {
+      width: 91px;
+      height: 5px;
+      background: blue; }
+    .snes-controller .bumpers .left {
+      left: 27px; }
+    .snes-controller .bumpers .right {
+      left: 287px; }
+  .snes-controller .selected {
+    display: block; }
+
+/*# sourceMappingURL=controller.css.map */

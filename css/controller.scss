@@ -1,0 +1,143 @@
+$selected-color: blue;
+
+.snes-controller {
+  background-image: url("../assets/snes-controller.png");
+  width: 566px;
+  height: 245px;
+  position: absolute;
+
+  div {
+    position: absolute;
+  }
+
+  span {
+    position: absolute;
+    display: none;
+  }
+
+  .d-pad {
+    top: 70px;
+    left: 70px;
+    height: 110px;
+    width: 110px;
+
+    .arrow {
+      margin: auto;
+      width: 0;
+      height: 0;
+    }
+
+    .up {
+      top: 4px;
+      left: 37px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 25px solid $selected-color;
+    }
+
+    .right {
+      top: 40px;
+      left: 79px;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid $selected-color;
+    }
+
+    .left {
+      top: 40px;
+      left: 2px;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 25px solid $selected-color;
+    }
+
+    .down {
+      top: 81px;
+      left: 37px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 25px solid $selected-color;
+    }
+  }
+
+  .menu-buttons {
+    left: 222px;
+    top: 121px;
+    height: 45px;
+    width: 100px;
+
+    span {
+      width: 43px;
+      height: 19px;
+      transform: rotate(145deg);
+      border-radius: 5px;
+      background: $selected-color;
+    }
+
+    .select {
+      top: 17px;
+    }
+
+    .start {
+      top: 17px;
+      left: 56px;
+    }
+  }
+
+  .buttons {
+    height: 120px;
+    width: 160px;
+    left: 376px;
+    top: 68px;
+
+    span {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $selected-color;
+    }
+
+    .y {
+      top: 32px;
+      left: 7px;
+    }
+
+    .x {
+      top: 0px;
+      left: 55px;
+    }
+
+    .b {
+      top: 76px;
+      left: 56px;
+    }
+
+    .a {
+      top: 44px;
+      left: 104px;
+    }
+  }
+
+  .bumpers {
+    width: 390px;
+    height: 10px;
+    top: 2px;
+    left: 90px;
+
+    span {
+      width: 91px;
+      height: 5px;
+      background: $selected-color;
+    }
+    .left {
+      left: 27px;
+    }
+
+    .right {
+      left: 287px;
+    }
+  }
+  .selected {
+    display: block;
+  }
+}
