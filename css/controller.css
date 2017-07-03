@@ -88,9 +88,9 @@
       width: 91px;
       height: 5px;
       background: blue; }
-    .snes-controller .bumpers .left {
+    .snes-controller .bumpers .left-bumper {
       left: 27px; }
-    .snes-controller .bumpers .right {
+    .snes-controller .bumpers .right-bumper {
       left: 287px; }
   .snes-controller .selected {
     display: block; }
