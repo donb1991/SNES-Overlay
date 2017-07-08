@@ -9,7 +9,8 @@ function createWindow () {
 
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',  
+    icon: __dirname + '/assets.icon.png',
+    protocol: 'file:',
     slashes: true
   }));
 
