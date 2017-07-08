@@ -32,21 +32,23 @@ var controllers = (function() {
   }
 
   function updateStatus() {
-    toggleSelect(gamepads[0].buttons[0], document.getElementsByClassName('b')[0]);
-    toggleSelect(gamepads[0].buttons[1], document.getElementsByClassName('a')[0]);
-    toggleSelect(gamepads[0].buttons[2], document.getElementsByClassName('y')[0]);
-    toggleSelect(gamepads[0].buttons[3], document.getElementsByClassName('x')[0]);
+    var controller = getCurrentController();
 
-    toggleSelect(gamepads[0].buttons[4], document.getElementsByClassName('left-bumper')[0]);
-    toggleSelect(gamepads[0].buttons[5], document.getElementsByClassName('right-bumper')[0]);
+    toggleSelect(gamepads[0].buttons[controller.b], document.getElementsByClassName('b')[0]);
+    toggleSelect(gamepads[0].buttons[controller.a], document.getElementsByClassName('a')[0]);
+    toggleSelect(gamepads[0].buttons[controller.y], document.getElementsByClassName('y')[0]);
+    toggleSelect(gamepads[0].buttons[controller.x], document.getElementsByClassName('x')[0]);
 
-    toggleSelect(gamepads[0].buttons[8], document.getElementsByClassName('select')[0]);
-    toggleSelect(gamepads[0].buttons[9], document.getElementsByClassName('start')[0]);
+    toggleSelect(gamepads[0].buttons[controller.leftBumper], document.getElementsByClassName('left-bumper')[0]);
+    toggleSelect(gamepads[0].buttons[controller.rightBumper], document.getElementsByClassName('right-bumper')[0]);
 
-    toggleSelect(gamepads[0].buttons[12], document.getElementsByClassName('up')[0]);
-    toggleSelect(gamepads[0].buttons[13], document.getElementsByClassName('down')[0]);
-    toggleSelect(gamepads[0].buttons[14], document.getElementsByClassName('left')[0]);
-    toggleSelect(gamepads[0].buttons[15], document.getElementsByClassName('right')[0]);
+    toggleSelect(gamepads[0].buttons[controller.select], document.getElementsByClassName('select')[0]);
+    toggleSelect(gamepads[0].buttons[controller.start], document.getElementsByClassName('start')[0]);
+
+    toggleSelect(gamepads[0].buttons[controller.up], document.getElementsByClassName('up')[0]);
+    toggleSelect(gamepads[0].buttons[controller.down], document.getElementsByClassName('down')[0]);
+    toggleSelect(gamepads[0].buttons[controller.left], document.getElementsByClassName('left')[0]);
+    toggleSelect(gamepads[0].buttons[controller.right], document.getElementsByClassName('right')[0]);
   }
 
   function toggleSelect(button, element) {
@@ -59,6 +61,17 @@ var controllers = (function() {
         element.className = element.className.slice(0, -8);
       }
     }
+  }
+
+  function getCurrentController() {
+    var controller;
+    if (gamepads[0].id.indexOf("Xbox One") > -1) {
+      controller = xboxOneController;
+    } else {
+      controller = defaultController;
+    }
+
+    return controller;
   }
 
   init();
