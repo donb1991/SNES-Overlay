@@ -26,8 +26,8 @@ var controllers = (function() {
     for (var i = 0; i < scanedGamepads.length; i++) {
       if (scanedGamepads[i]) {
         gamepads[scanedGamepads[i].index] = scanedGamepads[i];
+        updateStatus();
       }
-      updateStatus();
     }
   }
 
