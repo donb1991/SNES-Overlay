@@ -14,7 +14,7 @@ var controllers = (function() {
   }
 
   function connectHandler(e) {
-    gamepads[gamepad.index] = e.gamepad;
+    gamepads[e.gamepad.index] = e.gamepad;
   }
 
   function disconnecthandler() {
